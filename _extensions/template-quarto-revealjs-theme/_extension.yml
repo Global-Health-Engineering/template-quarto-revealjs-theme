@@ -1,0 +1,10 @@
+title: Template-quarto-revealjs-theme
+author: Lars Schöbitz
+version: 1.0.0
+quarto-required: ">=1.2.0"
+contributes:
+  formats:
+    revealjs:
+      theme: [dark, custom.scss]
+      logo: logo.svg
+
