@@ -1,10 +1,18 @@
 title: Template-quarto-revealjs-theme
-author: Lars Schöbitz
+author: Sebastian Loos
 version: 1.0.0
 quarto-required: ">=1.2.0"
 contributes:
   formats:
     revealjs:
-      theme: [dark, custom.scss]
-      logo: logo.svg
+      logo: ghe-logo.png
+      theme: [default, custom.scss]
+      slide-number: c/t
+      show-slide-number: all
+      title-slide-attributes:
+        data-background-color: "#fff"
+        data-background-image: eth_logo_kurz_pos.png, ghe-logo.png
+        data-background-position: left top, right top
+        data-background-size: auto
+      preview-links: true
 
