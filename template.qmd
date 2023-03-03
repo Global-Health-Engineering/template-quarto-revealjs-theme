@@ -4,6 +4,8 @@ subtitle: This is a Subtitle that can be changed.
 format:
   template-quarto-revealjs-theme-revealjs:
     theme: default
+    template-partials:
+      - title-slide.html
     slide-number: true
     chalkboard: 
       buttons: false
