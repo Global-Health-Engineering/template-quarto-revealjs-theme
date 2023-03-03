@@ -16,10 +16,6 @@ institute:
 date: last-modified
 ---
 
-## Introduction
-
-*TODO* Create an example file that demonstrates the formatting and features of your format
-
 ## Hello, There
 
 This presentation will show you examples of what you can do with Quarto and [Reveal.js](https://revealjs.com), including:
@@ -234,7 +230,7 @@ Highlight red
 Learn more: [Fragments](https://quarto.org/docs/presentations/revealjs/advanced.html#fragments)
 :::
 
-## Slide Backgrounds {background="#43464B"}
+## Slide Backgrounds {background="#901C6C"}
 
 Set the `background` attribute on a slide to change the background color (all CSS color formats are supported).
 
@@ -244,7 +240,7 @@ Different background transitions are available via the `background-transition` o
 Learn more: [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#color-backgrounds)
 :::
 
-## Media Backgrounds {background="#43464B" background-image="images/milky-way.jpeg"}
+## Media Backgrounds {background="#901C6C" background-image="http://wallup.net/wp-content/uploads/2017/03/29/487017-sky-Milky_Way.jpg"}
 
 You can also use the following as a slide background:
 
@@ -262,11 +258,11 @@ Learn more: [Media Backgrounds](https://quarto.org/docs/presentations/revealjs/#
 
 Position images or other elements at precise locations
 
-![](mini/images/kitten-400-350.jpeg){.absolute top="170" left="30" width="400" height="400"}
+![](https://quarto.org/docs/presentations/revealjs/demo/mini/images/kitten-400-350.jpeg){.absolute top="170" left="30" width="400" height="400"}
 
-![](mini/images/kitten-450-250.jpeg){.absolute .fragment top="150" right="80" width="450"}
+![](https://quarto.org/docs/presentations/revealjs/demo/mini/images/kitten-450-250.jpeg){.absolute .fragment top="150" right="80" width="450"}
 
-![](mini/images/kitten-300-200.jpeg){.absolute .fragment bottom="110" right="130" width="300"}
+![](https://quarto.org/docs/presentations/revealjs/demo/mini/images/kitten-300-200.jpeg){.absolute .fragment bottom="110" right="130" width="300"}
 
 ::: footer
 Learn more: [Absolute Position](https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position)
@@ -315,7 +311,7 @@ Learn more: [Auto-Animate](https://quarto.org/docs/presentations/revealjs/advanc
 The next few slides will transition using the `slide` transition
 
 | Transition | Description                                                            |
-|------------------|------------------------------------------------------|
+|-------------------|-----------------------------------------------------|
 | `none`     | No transition (default, switch instantly)                              |
 | `fade`     | Cross fade                                                             |
 | `slide`    | Slide horizontally                                                     |
@@ -409,7 +405,7 @@ Use the `preview-links` option to open links in an iframe on top of your slides.
 Learn more: [Preview Links](https://quarto.org/docs/presentations/revealjs/presenting.html#preview-links)
 :::
 
-## Themes
+## Themes {visivbility="hidden"}
 
 10 Built-in Themes (or [create your own](https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes))
 
@@ -422,9 +418,6 @@ Learn more: [Themes](https://quarto.org/docs/presentations/revealjs/themes.html)
 ::: {style="margin-bottom: 0.9em;"}
 Quickly jump to other parts of your presentation
 :::
-
-::: {layout="[1, 20]"}
-![](images/presentation-menu.png){width="41"}
 
 Toggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools.
 :::
@@ -442,13 +435,13 @@ Free form drawing and slide annotations
 :::
 
 ::: {layout="[1, 20]"}
-![](images/presentation-chalkboard.png){width="41"}
+
 
 Use the chalkboard button at the bottom left of the slide to toggle the chalkboard.
 :::
 
 ::: {layout="[1, 20]"}
-![](images/presentation-notes-canvas.png){width="41"}
+
 
 Use the notes canvas button at the bottom left of the slide to toggle drawing on top of the current slide.
 :::
@@ -481,7 +474,7 @@ Press `s` (or use the presentation menu) to open speaker view
 Learn more: [Speaker View](https://quarto.org/docs/presentations/revealjs/presenting.html#speaker-view)
 :::
 
-## Authoring Tools {.smaller}
+## Authoring Tools {visibility="hidden"}
 
 Live side-by-side preview for any notebook or text editor including Jupyter and VS Code
 
@@ -499,7 +492,7 @@ Live side-by-side preview for any notebook or text editor including Jupyter and 
 Learn more: [Jupyter](https://quarto.org/docs/tools/jupyter-lab.html), [VS Code](https://quarto.org/docs/tools/vscode.html), [Text Editors](https://quarto.org/docs/tools/text-editors.html)
 :::
 
-## Authoring Tools {.smaller}
+## Authoring Tools {visibility="hidden"}
 
 RStudio includes an integrated presentation preview pane
 
