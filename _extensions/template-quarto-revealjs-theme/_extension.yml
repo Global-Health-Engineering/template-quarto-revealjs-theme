@@ -11,8 +11,8 @@ contributes:
       show-slide-number: all
       title-slide-attributes:
         data-background-color: "#fff"
-        data-background-image: eth_logo_kurz_pos.png, ghe-logo.png
-        data-background-position: left top, right top
-        data-background-size: auto
+        data-background-image: eth_logo_kurz_pos.png
+        data-background-position: left top
+        data-background-size: 15%
       preview-links: true
 
