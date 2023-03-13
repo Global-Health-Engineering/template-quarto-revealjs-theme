@@ -18,14 +18,16 @@ $dark-bg-text-color: #fff !default;
 $dark-bg-link-color: lighten($link-color, 50%) !default;
 $dark-bg-code-color: lighten($code-color, 50%) !default;
 
+
 /* TODO: Provide custom CSS rules */
 /*-- scss:rules --*/
 .reveal pre code {
-  background-color: #025135;
-  font-size: 1em;
+  background-color: #ececec;
+  font-size: 1.5em;
   padding: 0.5em;
   line-height: 1.2em;
 }
+
 .subtitle {
   font-size: $presentation-h2-font-size;
   font-family: $presentation-heading-font;
@@ -58,9 +60,8 @@ $dark-bg-code-color: lighten($code-color, 50%) !default;
 }
 
 section.has-dark-background a, section.has-dark-background a:hover {
-    color: #fee4ff;
+    color: #fff;
 }
-
 
 .slide-logo {
   display: block !important;

@@ -18,159 +18,41 @@ date: last-modified
 
 ## Hello, There
 
-This presentation will show you examples of what you can do with Quarto and [Reveal.js](https://revealjs.com), including:
+This presentation includes example slides that can be used as guidance for GHE presentations. They show how to:
 
--   Presenting code and LaTeX equations
--   Including computations in slide output
--   Image, video, and iframe backgrounds
--   Fancy transitions and animations
+-   Include computations in slide output
+-   add images and backgrounds
+-   design slides with incrementally outputs
 -   Printing to PDF
 
 ...and much more
 
-## Pretty Code {auto-animate="true"}
-
--   Over 20 syntax highlighting themes available
--   Default theme optimized for accessibility
-
-``` r
-# Define a server for the Shiny app
-function(input, output) {
-  
-  # Fill in the spot we created for a plot
-  output$phonePlot <- renderPlot({
-    # Render a barplot
-  })
-}
-```
-
-::: footer
-Learn more: [Syntax Highlighting](https://quarto.org/docs/output-formats/html-code.html#highlighting)
-:::
-
-## Code Animations {auto-animate="true"}
-
--   Over 20 syntax highlighting themes available
--   Default theme optimized for accessibility
-
-``` r
-# Define a server for the Shiny app
-function(input, output) {
-  
-  # Fill in the spot we created for a plot
-  output$phonePlot <- renderPlot({
-    # Render a barplot
-    barplot(WorldPhones[,input$region]*1000, 
-            main=input$region,
-            ylab="Number of Telephones",
-            xlab="Year")
-  })
-}
-```
-
-::: footer
-Learn more: [Code Animations](https://quarto.org/docs/presentations/revealjs/advanced.html#code-animations)
-:::
-
-## Line Highlighting
-
--   Highlight specific lines for emphasis
--   Incrementally highlight additional lines
-
-``` {.python code-line-numbers="4-5|7|10"}
-import numpy as np
-import matplotlib.pyplot as plt
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-plt.show()
-```
-
-::: footer
-Learn more: [Line Highlighting](https://quarto.org/docs/presentations/revealjs/#line-highlighting)
-:::
-
-## Executable Code
-
-```{r}
-#| echo: true
-#| fig-width: 10
-#| fig-height: 4.5
-library(ggplot2)
-ggplot(mtcars, aes(hp, mpg, color = am)) +
-  geom_point() +
-  geom_smooth(formula = y ~ x, method = "loess")
-```
-
-::: footer
-Learn more: [Executable Code](https://quarto.org/docs/presentations/revealjs/#executable-code)
-:::
-
-## LaTeX Equations
-
-[MathJax](https://www.mathjax.org/) rendering of equations to HTML
-
-::: columns
-::: {.column width="40%"}
-``` tex
-\begin{gather*}
-a_1=b_1+c_1\\
-a_2=b_2+c_2-d_2+e_2
-\end{gather*}
-\begin{align}
-a_{11}& =b_{11}&
-  a_{12}& =b_{12}\\
-a_{21}& =b_{21}&
-  a_{22}& =b_{22}+c_{22}
-\end{align}
-```
-:::
-
-::: {.column width="60%"}
-```{=tex}
-\begin{gather*}
-a_1=b_1+c_1\\
-a_2=b_2+c_2-d_2+e_2
-\end{gather*}
-```
-```{=tex}
-\begin{align}
-a_{11}& =b_{11}&
-  a_{12}& =b_{12}\\
-a_{21}& =b_{21}&
-  a_{22}& =b_{22}+c_{22}
-\end{align}
-```
-:::
-:::
-
-::: footer
-Learn more: [LaTeX Equations](https://quarto.org/docs/authoring/markdown-basics.html#equations)
-:::
-
-## Column Layout {.smaller}
+## Column Layout
 
 Arrange content into columns of varying widths:
 
 ::: columns
 ::: {.column width="35%"}
-#### Motor Trend Car Road Tests
+### Level 3 Header
 
-The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.
+This is the content of the left column.
+
+The width of the column is 32% of the page width.
 :::
 
 ::: {.column width="3%"}
 :::
 
 ::: {.column width="62%"}
-```{r}
-knitr::kable(head(mtcars)[,c("mpg",	"cyl", "disp", "hp", "wt")])
-```
+#### Level 4 Header
+
+This is the content of the left column.
+
+The width of the column is 62% of the page width.
 :::
 :::
+
+Notice that there is a gap between (3%) the two columns!
 
 ::: footer
 Learn more: [Multiple Columns](https://quarto.org/docs/presentations/revealjs/#multiple-columns)
@@ -188,7 +70,7 @@ Lists can optionally be displayed incrementally:
 
 . . .
 
-<br/> Insert pauses to make other types of content display incrementally.
+Insert pauses to make other types of content display incrementally.
 
 ::: footer
 Learn more: [Incremental Lists](https://quarto.org/docs/presentations/revealjs/#incremental-lists)
@@ -197,8 +79,6 @@ Learn more: [Incremental Lists](https://quarto.org/docs/presentations/revealjs/#
 ## Fragments
 
 Incremental text display and animation with fragments:
-
-<br/>
 
 ::: {.fragment .fade-in}
 Fade in
@@ -218,12 +98,10 @@ Fade in then semi out
 
 . . .
 
-::: {.fragment .strike}
-Strike
-:::
-
 ::: {.fragment .highlight-red}
-Highlight red
+::: {.fragment .strike}
+Highlight red and strike
+:::
 :::
 
 ::: footer
@@ -248,8 +126,6 @@ You can also use the following as a slide background:
 
 -   A video: `background-video`
 
--   An iframe: `background-iframe`
-
 ::: footer
 Learn more: [Media Backgrounds](https://quarto.org/docs/presentations/revealjs/#image-backgrounds)
 :::
@@ -268,45 +144,9 @@ Position images or other elements at precise locations
 Learn more: [Absolute Position](https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position)
 :::
 
-## Auto-Animate {auto-animate="true" auto-animate-easing="ease-in-out"}
+## Tables using Markdown {.smaller}
 
-Automatically animate matching elements across slides with Auto-Animate.
-
-::: r-hstack
-::: {data-id="box1" auto-animate-delay="0" style="background: #2780e3; width: 200px; height: 150px; margin: 10px;"}
-:::
-
-::: {data-id="box2" auto-animate-delay="0.1" style="background: #3fb618; width: 200px; height: 150px; margin: 10px;"}
-:::
-
-::: {data-id="box3" auto-animate-delay="0.2" style="background: #e83e8c; width: 200px; height: 150px; margin: 10px;"}
-:::
-:::
-
-::: footer
-Learn more: [Auto-Animate](https://quarto.org/docs/presentations/revealjs/advanced.html#auto-animate)
-:::
-
-## Auto-Animate {auto-animate="true" auto-animate-easing="ease-in-out"}
-
-Automatically animate matching elements across slides with Auto-Animate.
-
-::: r-stack
-::: {data-id="box1" style="background: #2780e3; width: 350px; height: 350px; border-radius: 200px;"}
-:::
-
-::: {data-id="box2" style="background: #3fb618; width: 250px; height: 250px; border-radius: 200px;"}
-:::
-
-::: {data-id="box3" style="background: #e83e8c; width: 150px; height: 150px; border-radius: 200px;"}
-:::
-:::
-
-::: footer
-Learn more: [Auto-Animate](https://quarto.org/docs/presentations/revealjs/advanced.html#auto-animate)
-:::
-
-## Slide Transitions {.smaller}
+### Example: Slide Transitions
 
 The next few slides will transition using the `slide` transition
 
@@ -346,68 +186,39 @@ knitr::kable(mtcars)
 Learn more: [Tabsets](https://quarto.org/docs/presentations/revealjs/#tabsets)
 :::
 
-## Interactive Slides {.smaller transition="slide"}
-
-Include Jupyter widgets and htmlwidgets in your presentations
-
-```{r}
-#| echo: false
-#| fig-height: 5
-library(leaflet)
-leaflet() %>%
-  addTiles() %>%  # Add default OpenStreetMap map tiles
-  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
-```
-
-::: footer
-Learn more: [Jupyter widgets](https://quarto.org/docs/interactive/widgets/jupyter.html), [htmlwidgets](https://quarto.org/docs/interactive/widgets/htmlwidgets.html)
-:::
-
-## Interactive Slides {.smaller transition="slide"}
-
-Turn presentations into applications with Observable and Shiny. Use component layout to position inputs and outputs.
-
-```{r}
-ojs_define(actors = data.frame(
-  x = rnorm(100),
-  y = rnorm(100)
-))
-```
-
-```{ojs}
-//| panel: sidebar
-viewof talentWeight = Inputs.range([-2, 2], { value: 0.7, step: 0.01, label: "talent weight" })
-viewof looksWeight = Inputs.range([-2, 2], { value: 0.7, step: 0.01, label: "looks weight" })
-viewof minimum = Inputs.range([-2, 2], { value: 1, step: 0.01, label: "min fame" })
-```
-
-```{ojs}
-//| panel: fill
-import { plotActors } from './actors.js';
-plotActors(actors, talentWeight, looksWeight, minimum)
-```
-
-::: footer
-Learn more: [Observable](https://quarto.org/docs/interactive/ojs/), [Shiny](https://quarto.org/docs/interactive/shiny/), [Component Layout](https://quarto.org/docs/interactive/layout.html)
-:::
-
-## Preview Links
+## Preview Links {transition="slide"}
 
 Navigate to hyperlinks without disrupting the flow of your presentation.
 
 Use the `preview-links` option to open links in an iframe on top of your slides. Try clicking the link below for a demonstration:
 
 ::: {style="text-align: center; margin-top: 1em"}
-[Matplotlib: Visualization with Python](https://matplotlib.org/){preview-link="true" style="text-align: center"}
+[Quarto Homepage](https://quarto.org){preview-link="true" style="text-align: center"}
 :::
 
 ::: footer
 Learn more: [Preview Links](https://quarto.org/docs/presentations/revealjs/presenting.html#preview-links)
 :::
 
-## Themes {visivbility="hidden"}
+## Slide Visibility {.smaller transition="slide"}
 
-10 Built-in Themes (or [create your own](https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes))
+#### Hide Slides
+
+You can hide a slide by adding the visibility="hidden" attribute to the slide heading. For example:
+
+    ## Slide Title {visibility="hidden"}
+
+#### Uncounted Slides
+
+Optional slides can sometimes be helpful that you may or may not have time to show.
+
+To \"hide\" slides from then numbering system you can use `visibility="uncounted"`. For example:
+
+    ## Slide 1
+
+    ## Slide 2
+
+    ## Slide 3 {visibility="uncounted"}
 
 ::: footer
 Learn more: [Themes](https://quarto.org/docs/presentations/revealjs/themes.html)
@@ -415,11 +226,9 @@ Learn more: [Themes](https://quarto.org/docs/presentations/revealjs/themes.html)
 
 ## Easy Navigation
 
-::: {style="margin-bottom: 0.9em;"}
 Quickly jump to other parts of your presentation
-:::
 
-Toggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools. :::
+Toggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools.
 
 You can also press `m` to toggle the menu open and closed.
 
@@ -427,31 +236,11 @@ You can also press `m` to toggle the menu open and closed.
 Learn more: [Navigation](https://quarto.org/docs/presentations/revealjs/presenting.html#navigation-menu)
 :::
 
-## Chalkboard {chalkboard-buttons="true"}
-
-::: {style="margin-bottom: 0.9em;"}
-Free form drawing and slide annotations
-:::
-
-::: {layout="[1, 20]"}
-Use the chalkboard button at the bottom left of the slide to toggle the chalkboard.
-:::
-
-::: {layout="[1, 20]"}
-Use the notes canvas button at the bottom left of the slide to toggle drawing on top of the current slide.
-:::
-
-You can also press `b` to toggle the chalkboard or `c` to toggle the notes canvas.
-
-::: footer
-Learn more: [Chalkboard](https://quarto.org/docs/presentations/revealjs/presenting.html#chalkboard)
-:::
-
 ## Point of View
 
-Press `o` to toggle overview mode:
+Press `o` to toggle overview mode
 
-![](images/overview-mode.png){.border}
+![](https://quarto.org/docs/presentations/revealjs/demo/images/overview-mode.png)
 
 Hold down the `Alt` key (or `Ctrl` in Linux) and click on any element to zoom towards it---try it now on this slide.
 
@@ -463,38 +252,20 @@ Learn more: [Overview Mode](https://quarto.org/docs/presentations/revealjs/prese
 
 Press `s` (or use the presentation menu) to open speaker view
 
-![](images/speaker-view.png){fig-align="center" style="border: 3px solid #dee2e6;" width="780"}
+![](https://quarto.org/docs/presentations/revealjs/demo/images/speaker-view.png){width="1500"}
 
 ::: footer
 Learn more: [Speaker View](https://quarto.org/docs/presentations/revealjs/presenting.html#speaker-view)
 :::
 
-## Authoring Tools {visibility="hidden"}
+::: notes
+This is how the speaker notes are presented when you got to the speaker view. You can also ad lists:
 
-Live side-by-side preview for any notebook or text editor including Jupyter and VS Code
+-   Point number one
 
-::: columns
-::: {.column width="50%"}
-![](images/jupyter-edit.png){.border .border-thick}
-:::
+-   Point number two
 
-::: {.column width="50%"}
-![](images/jupyter-preview.png){.border .border-thick}
-:::
-:::
-
-::: footer
-Learn more: [Jupyter](https://quarto.org/docs/tools/jupyter-lab.html), [VS Code](https://quarto.org/docs/tools/vscode.html), [Text Editors](https://quarto.org/docs/tools/text-editors.html)
-:::
-
-## Authoring Tools {visibility="hidden"}
-
-RStudio includes an integrated presentation preview pane
-
-![](images/rstudio.png){.border width="900"}
-
-::: footer
-Learn more: [RStudio](https://quarto.org/docs/tools/rstudio.html)
+-   Point number three
 :::
 
 ## And More...
@@ -507,7 +278,3 @@ Learn more: [RStudio](https://quarto.org/docs/tools/rstudio.html)
 ::: footer
 Learn more: [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/)
 :::
-
-## More Information
-
-You can learn more about controlling the appearance of RevealJS output here: <https://quarto.org/docs/presentations/revealjs/>
