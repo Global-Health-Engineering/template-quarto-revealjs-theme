@@ -80,7 +80,7 @@ $slide-height: calc(var(--slide-height) + #{$border-updown-width} * 2);
 @mixin full-screen {
   position: absolute;
   top: -$border-updown-width;
-  left: -$border-leftright-width;
+  right: -$border-leftright-width;
   height: $slide-height !important;
   width: $slide-width !important;
   max-height: $slide-height !important;
