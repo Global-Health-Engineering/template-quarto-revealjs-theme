@@ -74,13 +74,13 @@ section.has-dark-background a, section.has-dark-background a:hover {
     color: #fff;
 }
 
-$slide-width: calc(var(--slide-width) + #{$border-leftright-width} * 2);
-$slide-height: calc(var(--slide-height) + #{$border-updown-width} * 2);
+$slide-width: calc(var(--slide-width) + #{80px} * 2);
+$slide-height: calc(var(--slide-height) + #{40px} * 2);
 
 @mixin full-screen {
   position: absolute;
-  top: -$border-updown-width;
-  right: -$border-leftright-width;
+  top: -40px;
+  left: -80px;
   height: $slide-height !important;
   width: $slide-width !important;
   max-height: $slide-height !important;
@@ -107,14 +107,14 @@ html.print-pdf .quarto-dark {
 
 .image-left {
   @include full-screen;
-  left: -$border-leftright-width;
+  left: -84px;
   width: $slide-width / 2 !important;
   max-width: $slide-width / 2 !important;
 }
 
 .image-right {
   @include full-screen;
-  right: -$border-leftright-width;
+  right: -84px;
   width: $slide-width / 2 !important;
   max-width: $slide-width / 2 !important;
 }
