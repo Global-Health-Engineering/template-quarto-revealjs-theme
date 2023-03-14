@@ -144,6 +144,36 @@ Position images or other elements at precise locations
 Learn more: [Absolute Position](https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position)
 :::
 
+##  {.image-left}
+
+::: columns
+::: {.column width="45%"}
+:::
+
+::: {.column width="55%"}
+### Image left
+
+This is a slide where an image is in the background to the left.
+:::
+:::
+
+![](20190214_glass-bottles_vertical.jpg){.image-left}
+
+##  {.image-right}
+
+::: columns
+::: {.column width="45%"}
+### Image right
+
+This is a slide where an image is in the background to the right.
+:::
+
+::: {.column width="55%"}
+:::
+:::
+
+![](20190214_glass-bottles_vertical.jpg){.image-right}
+
 ## Tables using Markdown {.smaller}
 
 ### Example: Slide Transitions
@@ -151,7 +181,7 @@ Learn more: [Absolute Position](https://quarto.org/docs/presentations/revealjs/a
 The next few slides will transition using the `slide` transition
 
 | Transition | Description                                                            |
-|------------|------------------------------------------------------------------------|
+|---------------|---------------------------------------------------------|
 | `none`     | No transition (default, switch instantly)                              |
 | `fade`     | Cross fade                                                             |
 | `slide`    | Slide horizontally                                                     |
@@ -212,7 +242,7 @@ You can hide a slide by adding the visibility="hidden" attribute to the slide he
 
 Optional slides can sometimes be helpful that you may or may not have time to show.
 
-To \"hide\" slides from then numbering system you can use `visibility="uncounted"`. For example:
+To "hide" slides from then numbering system you can use `visibility="uncounted"`. For example:
 
     ## Slide 1
 
