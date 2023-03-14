@@ -115,7 +115,7 @@ Set the `background` attribute on a slide to change the background color (all CS
 Different background transitions are available via the `background-transition` option.
 
 ::: footer
-Learn more: [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#color-backgrounds)
+Learn more: [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#slide-backgrounds)
 :::
 
 ## Media Backgrounds {background="#901C6C" background-image="http://wallup.net/wp-content/uploads/2017/03/29/487017-sky-Milky_Way.jpg"}
@@ -129,6 +129,115 @@ You can also use the following as a slide background:
 ::: footer
 Learn more: [Media Backgrounds](https://quarto.org/docs/presentations/revealjs/#image-backgrounds)
 :::
+
+##  {background-image="20210601_biogas.jpg" background-size="contain" background-repeat="no-repeat" background-position="left"}
+
+::: columns
+::: {.column width="45%"}
+:::
+
+::: {.column width="55%"}
+#### Image left using Quarto
+
+This is a slide where an image is in the background to the left.
+
+``` quarto
+##  {background-image="imageName.jpg" background-size="contain" background-repeat="no-repeat" background-position="left"}
+```
+:::
+:::
+
+::: {.footer style="text-align: right; margin-left: 45%; right: 20%"}
+Learn more: [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#slide-backgrounds)
+:::
+
+##  {.image-left .smaller}
+
+::: columns
+::: {.column width="45%"}
+:::
+
+::: {.column width="55%"}
+#### Image left using `.image-left`
+
+This is a slide where an image is in the background to the left.
+
+``` quarto
+##  {.image-left}
+
+::: columns
+::: {.column width="45%"}
+:::
+
+::: {.column width="55%"}
+Text
+:::
+:::
+
+![](imageName.jpg){.image-left}
+```
+:::
+:::
+
+![](20210601_biogas.jpg){.image-left}
+
+::: {.footer style="text-align: right; margin-left: 45%; right: 20%"}
+Learn more: [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#slide-backgrounds)
+:::
+
+##  {background-image="20190214_glass-bottles_vertical.jpg" background-size="contain" background-repeat="no-repeat" background-position="right"}
+
+::: columns
+::: {.column width="60%"}
+#### Image right using Quarto
+
+This is a slide where an image is in the background to the right.
+
+``` quarto
+##  {background-image="image-name.jpg" background-size="contain" background-repeat="no-repeat" background-position="right"}
+```
+:::
+
+::: {.column width="40%"}
+:::
+:::
+
+::: {.footer style="text-align: left; margin-left: 50px"}
+Learn more: [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#slide-backgrounds)
+:::
+
+##  {.image-right}
+
+::: columns
+::: {.column width="50%"}
+#### Image right using `.image-right`
+
+This is a slide where an image is in the background to the right.
+
+``` quarto
+##  {.image-right}
+
+::: columns
+::: {.column width="50%"}
+Text
+:::
+::: {.column width="50%"}
+:::
+:::
+![](imageName.jpg){.image-right}
+```
+:::
+
+::: {.column width="50%"}
+:::
+:::
+
+![](20190214_glass-bottles_vertical.jpg){.image-right}
+
+::: {.footer style="text-align: left; margin-left: 50px"}
+Learn more: [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#slide-backgrounds)
+:::
+
 
 ## Absolute Position
 
@@ -144,36 +253,6 @@ Position images or other elements at precise locations
 Learn more: [Absolute Position](https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position)
 :::
 
-##  {.image-left}
-
-::: columns
-::: {.column width="45%"}
-:::
-
-::: {.column width="55%"}
-### Image left
-
-This is a slide where an image is in the background to the left.
-:::
-:::
-
-![](20190214_glass-bottles_vertical.jpg){.image-left}
-
-##  {.image-right}
-
-::: columns
-::: {.column width="45%"}
-### Image right
-
-This is a slide where an image is in the background to the right.
-:::
-
-::: {.column width="55%"}
-:::
-:::
-
-![](20190214_glass-bottles_vertical.jpg){.image-right}
-
 ## Tables using Markdown {.smaller}
 
 ### Example: Slide Transitions
@@ -181,7 +260,7 @@ This is a slide where an image is in the background to the right.
 The next few slides will transition using the `slide` transition
 
 | Transition | Description                                                            |
-|---------------|---------------------------------------------------------|
+|-----------------------|-------------------------------------------------|
 | `none`     | No transition (default, switch instantly)                              |
 | `fade`     | Cross fade                                                             |
 | `slide`    | Slide horizontally                                                     |

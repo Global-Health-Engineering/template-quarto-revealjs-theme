@@ -28,6 +28,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="template_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="template_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -422,7 +486,7 @@ Bob Lawbla
 <p>Set the <code>background</code> attribute on a slide to change the background color (all CSS color formats are supported).</p>
 <p>Different background transitions are available via the <code>background-transition</code> option.</p>
 <div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#color-backgrounds">Slide Backgrounds</a></p>
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#slide-backgrounds">Slide Backgrounds</a></p>
 </div>
 </section>
 <section id="media-backgrounds" class="slide level2" data-background="#901C6C" data-background-image="http://wallup.net/wp-content/uploads/2017/03/29/487017-sky-Milky_Way.jpg">
@@ -436,6 +500,88 @@ Bob Lawbla
 <p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#image-backgrounds">Media Backgrounds</a></p>
 </div>
 </section>
+<section id="section" class="slide level2" data-background-image="20210601_biogas.jpg" data-background-size="contain" data-background-repeat="no-repeat" data-background-position="left">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+
+</div><div class="column" style="width:55%;">
+<h4 id="image-left-using-quarto">Image left using Quarto</h4>
+<p>This is a slide where an image is in the background to the left.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource quarto number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>##  {background-image="imageName.jpg" background-size="contain" background-repeat="no-repeat" background-position="left"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="footer" style="text-align: right; margin-left: 45%; right: 20%">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#slide-backgrounds">Slide Backgrounds</a></p>
+</div>
+</section>
+<section id="section-1" class="slide level2 image-left smaller">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+
+</div><div class="column" style="width:55%;">
+<h4 id="image-left-using-.image-left">Image left using <code>.image-left</code></h4>
+<p>This is a slide where an image is in the background to the left.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource quarto number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a>##  {.image-left}</span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a>::: columns</span>
+<span id="cb2-4"><a href="#cb2-4"></a>::: {.column width="45%"}</span>
+<span id="cb2-5"><a href="#cb2-5"></a>:::</span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a>::: {.column width="55%"}</span>
+<span id="cb2-8"><a href="#cb2-8"></a>Text</span>
+<span id="cb2-9"><a href="#cb2-9"></a>:::</span>
+<span id="cb2-10"><a href="#cb2-10"></a>:::</span>
+<span id="cb2-11"><a href="#cb2-11"></a></span>
+<span id="cb2-12"><a href="#cb2-12"></a>![](imageName.jpg){.image-left}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+
+<img data-src="20210601_biogas.jpg" class="image-left r-stretch"><div class="footer" style="text-align: right; margin-left: 45%; right: 20%">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#slide-backgrounds">Slide Backgrounds</a></p>
+</div>
+</section>
+<section id="section-2" class="slide level2" data-background-image="20190214_glass-bottles_vertical.jpg" data-background-size="contain" data-background-repeat="no-repeat" data-background-position="right">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<h4 id="image-right-using-quarto">Image right using Quarto</h4>
+<p>This is a slide where an image is in the background to the right.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource quarto number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a>##  {background-image="image-name.jpg" background-size="contain" background-repeat="no-repeat" background-position="right"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:40%;">
+
+</div>
+</div>
+<div class="footer" style="text-align: left; margin-left: 50px">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#slide-backgrounds">Slide Backgrounds</a></p>
+</div>
+</section>
+<section id="section-3" class="slide level2 image-right">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="image-right-using-.image-right">Image right using <code>.image-right</code></h4>
+<p>This is a slide where an image is in the background to the right.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource quarto number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href="#cb4-1"></a>##  {.image-right}</span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a>::: columns</span>
+<span id="cb4-4"><a href="#cb4-4"></a>::: {.column width="50%"}</span>
+<span id="cb4-5"><a href="#cb4-5"></a>Text</span>
+<span id="cb4-6"><a href="#cb4-6"></a>:::</span>
+<span id="cb4-7"><a href="#cb4-7"></a>::: {.column width="50%"}</span>
+<span id="cb4-8"><a href="#cb4-8"></a>:::</span>
+<span id="cb4-9"><a href="#cb4-9"></a>:::</span>
+<span id="cb4-10"><a href="#cb4-10"></a>![](imageName.jpg){.image-right}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+
+</div>
+</div>
+
+<img data-src="20190214_glass-bottles_vertical.jpg" class="image-right r-stretch"><div class="footer" style="text-align: left; margin-left: 50px">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#slide-backgrounds">Slide Backgrounds</a></p>
+</div>
+</section>
 <section id="absolute-position" class="slide level2">
 <h2>Absolute Position</h2>
 <p>Position images or other elements at precise locations</p>
@@ -446,38 +592,14 @@ Bob Lawbla
 <p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position">Absolute Position</a></p>
 </div>
 </section>
-<section id="section" class="slide level2 image-left">
-<h2></h2>
-<div class="columns">
-<div class="column" style="width:45%;">
-
-</div><div class="column" style="width:55%;">
-<h3 id="image-left">Image left</h3>
-<p>This is a slide where an image is in the background to the left.</p>
-</div>
-</div>
-
-<img data-src="20190214_glass-bottles_vertical.jpg" class="image-left r-stretch"></section>
-<section id="section-1" class="slide level2 image-right">
-<h2></h2>
-<div class="columns">
-<div class="column" style="width:45%;">
-<h3 id="image-right">Image right</h3>
-<p>This is a slide where an image is in the background to the right.</p>
-</div><div class="column" style="width:55%;">
-
-</div>
-</div>
-
-<img data-src="20190214_glass-bottles_vertical.jpg" class="image-right r-stretch"></section>
 <section id="tables-using-markdown" class="slide level2 smaller">
 <h2>Tables using Markdown</h2>
 <h3 id="example-slide-transitions">Example: Slide Transitions</h3>
 <p>The next few slides will transition using the <code>slide</code> transition</p>
 <table>
 <colgroup>
-<col style="width: 20%">
-<col style="width: 79%">
+<col style="width: 31%">
+<col style="width: 68%">
 </colgroup>
 <thead>
 <tr class="header">
