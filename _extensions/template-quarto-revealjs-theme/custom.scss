@@ -20,7 +20,7 @@ $dark-bg-code-color: lighten($code-color, 50%) !default;
 
 //width
 
-$border-leftright-width: 80px;
+$border-leftright-width: 84px;
 $border-updown-width: 40px;
 
 /* TODO: Provide custom CSS rules */
@@ -69,6 +69,12 @@ section.has-dark-background a, section.has-dark-background a:hover {
 $slide-width: calc(var(--slide-width) + #{$border-leftright-width} * 2);
 $slide-height: calc(var(--slide-height) + #{$border-updown-width} * 2);
 
+$slide-width-left: calc(var(--slide-width-left) + #{$border-leftright-width} * 2);
+$slide-height-left: calc(var(--slide-height-left) + #{$border-updown-width} * 2);
+
+$slide-width-right: calc(var(--slide-width-right) + #{$border-leftright-width} * 2);
+$slide-height-right: calc(var(--slide-height-right) + #{$border-updown-width} * 2);
+
 @mixin full-screen {
   position: absolute;
   top: -$border-updown-width;
@@ -80,6 +86,30 @@ $slide-height: calc(var(--slide-height) + #{$border-updown-width} * 2);
   margin: 0 !important;
   z-index: -1;
 }
+
+/*@mixin full-screen-left {
+  position: absolute;
+  top: -$border-updown-width;
+  right: -$border-leftright-width;
+  height: $slide-height-left !important;
+  width: $slide-width-left !important;
+  max-height: $slide-height-left !important;
+  max-width: $slide-width-left !important;
+  margin: 0 !important;
+  z-index: -1;
+}*/
+
+/*@mixin full-screen-right {
+  position: absolute;
+  top: -$border-updown-width;
+  right: -$border-leftright-width;
+  height: $slide-height-right !important;
+  width: $slide-width-right !important;
+  max-height: $slide-height-right !important;
+  max-width: $slide-width-right !important;
+  margin: 0 !important;
+  z-index: -1;
+}*/
 
 .quarto-light {
   background-color: #fff;
@@ -105,11 +135,30 @@ html.print-pdf .quarto-dark {
 }
 
 .image-right {
-  @include full-screen;
+  position: absolute;
+  top: -$border-updown-width;
   right: -$border-leftright-width;
+  height: $slide-height !important;
+  max-height: $slide-height !important;
   width: $slide-width / 2 !important;
   max-width: $slide-width / 2 !important;
+  margin: 0 !important;
+  z-index: -1;
 }
+
+/*.image-left {
+  @include full-screen-left;
+  left: -$border-leftright-width;
+  width: $slide-width-left / 2 !important;
+  max-width: $slide-width-left / 2 !important;
+}
+
+.image-right {
+  @include full-screen-right;
+  right: -$border-leftright-width;
+  width: $slide-width-right / 2 !important;
+  max-width: $slide-width-right / 2 !important;
+}*/
 
 .slide-logo {
   display: block !important;

@@ -151,7 +151,7 @@ This is a slide where an image is in the background to the left.
 Learn more: [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#slide-backgrounds)
 :::
 
-##  {.image-left .smaller}
+##  {.image-left}
 
 ::: columns
 ::: {.column width="45%"}
