@@ -14,6 +14,7 @@ author:
 institute: 
   - Global Health Engineering
 date: last-modified
+bibliography: references.bib
 ---
 
 ## Hello, There
@@ -238,7 +239,6 @@ Text
 Learn more: [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#slide-backgrounds)
 :::
 
-
 ## Absolute Position
 
 Position images or other elements at precise locations
@@ -260,7 +260,7 @@ Learn more: [Absolute Position](https://quarto.org/docs/presentations/revealjs/a
 The next few slides will transition using the `slide` transition
 
 | Transition | Description                                                            |
-|-----------------------|-------------------------------------------------|
+|-------------------------|----------------------------------------------|
 | `none`     | No transition (default, switch instantly)                              |
 | `fade`     | Cross fade                                                             |
 | `slide`    | Slide horizontally                                                     |
@@ -305,7 +305,7 @@ Use the `preview-links` option to open links in an iframe on top of your slides.
 [Quarto Homepage](https://quarto.org){preview-link="true" style="text-align: center"}
 :::
 
-::: footer
+::: {.footer transition="slide"}
 Learn more: [Preview Links](https://quarto.org/docs/presentations/revealjs/presenting.html#preview-links)
 :::
 
@@ -313,7 +313,9 @@ Learn more: [Preview Links](https://quarto.org/docs/presentations/revealjs/prese
 
 #### Hide Slides
 
-You can hide a slide by adding the visibility="hidden" attribute to the slide heading. For example:
+You can hide a slide by adding the visibility="hidden" attribute to the slide heading.
+
+For example:
 
     ## Slide Title {visibility="hidden"}
 
@@ -321,7 +323,9 @@ You can hide a slide by adding the visibility="hidden" attribute to the slide he
 
 Optional slides can sometimes be helpful that you may or may not have time to show.
 
-To "hide" slides from then numbering system you can use `visibility="uncounted"`. For example:
+To "hide" slides from then numbering system you can use `visibility="uncounted"`.
+
+For example:
 
     ## Slide 1
 
@@ -361,7 +365,7 @@ Learn more: [Overview Mode](https://quarto.org/docs/presentations/revealjs/prese
 
 Press `s` (or use the presentation menu) to open speaker view
 
-![](https://quarto.org/docs/presentations/revealjs/demo/images/speaker-view.png){width="1500"}
+![](https://quarto.org/docs/presentations/revealjs/demo/images/speaker-view.png){fig-align="center" width="1500"}
 
 ::: footer
 Learn more: [Speaker View](https://quarto.org/docs/presentations/revealjs/presenting.html#speaker-view)
@@ -375,6 +379,52 @@ This is how the speaker notes are presented when you got to the speaker view. Yo
 -   Point number two
 
 -   Point number three
+:::
+
+## Citations
+
+You can include citations.
+
+Quarto^®^ is an open-source scientific and technical publishing system built on Pandoc[@quartoa].
+
+Include the `refernces.bib` file into the folder.
+
+``` {.yaml code-line-numbers="6"}
+---
+title: GHE Template Slides
+format:
+  template-quarto-revealjs-theme-revealjs:
+    theme: default
+bibliography: references.bib
+---
+```
+
+## Standard Footer {style=".smaller"}
+
+The standard footer is set in the YAML header
+
+``` {.yaml code-line-numbers="6"}
+---
+title: GHE Template Slides
+format:
+  template-quarto-revealjs-theme-revealjs:
+    theme: default
+    footer: Global Health Engineering <https://ghe.ethz.ch/>
+---
+```
+
+## Indiviual footer
+
+Include a individual footer for each slide including the footer attribute.
+
+``` quarto
+::: footer
+Learn more: [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/)
+:::
+```
+
+::: footer
+Learn more: [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/)
 :::
 
 ## And More...

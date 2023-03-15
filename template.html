@@ -92,6 +92,25 @@
     code span.va { color: #111111; } /* Variable */
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
   </style>
   <link rel="stylesheet" href="template_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="template_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -404,7 +423,7 @@ Bob Lawbla
     </div>
 </div>
 
-  <p class="date">3/14/23</p>
+  <p class="date">3/15/23</p>
 </section>
 <section id="hello-there" class="slide level2">
 <h2>Hello, There</h2>
@@ -598,8 +617,8 @@ Bob Lawbla
 <p>The next few slides will transition using the <code>slide</code> transition</p>
 <table>
 <colgroup>
-<col style="width: 31%">
-<col style="width: 68%">
+<col style="width: 35%">
+<col style="width: 64%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1151,18 +1170,20 @@ Bob Lawbla
 <div style="text-align: center; margin-top: 1em">
 <p><a href="https://quarto.org" data-preview-link="true" style="text-align: center">Quarto Homepage</a></p>
 </div>
-<div class="footer">
+<div class="footer" data-transition="slide">
 <p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#preview-links">Preview Links</a></p>
 </div>
 </section>
 <section id="slide-visibility" class="slide level2 smaller" data-transition="slide">
 <h2>Slide Visibility</h2>
 <h4 id="hide-slides">Hide Slides</h4>
-<p>You can hide a slide by adding the visibility=“hidden” attribute to the slide heading. For example:</p>
+<p>You can hide a slide by adding the visibility=“hidden” attribute to the slide heading.</p>
+<p>For example:</p>
 <pre><code>## Slide Title {visibility="hidden"}</code></pre>
 <h4 id="uncounted-slides">Uncounted Slides</h4>
 <p>Optional slides can sometimes be helpful that you may or may not have time to show.</p>
-<p>To “hide” slides from then numbering system you can use <code>visibility="uncounted"</code>. For example:</p>
+<p>To “hide” slides from then numbering system you can use <code>visibility="uncounted"</code>.</p>
+<p>For example:</p>
 <pre><code>## Slide 1
 
 ## Slide 2
@@ -1194,7 +1215,7 @@ Bob Lawbla
 <h2>Speaker View</h2>
 <p>Press <code>s</code> (or use the presentation menu) to open speaker view</p>
 
-<img data-src="https://quarto.org/docs/presentations/revealjs/demo/images/speaker-view.png" width="1500" class="r-stretch"><div class="footer">
+<img data-src="https://quarto.org/docs/presentations/revealjs/demo/images/speaker-view.png" width="1500" class="r-stretch quarto-figure-center"><div class="footer">
 <p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#speaker-view">Speaker View</a></p>
 </div>
 <aside class="notes">
@@ -1216,7 +1237,41 @@ Bob Lawbla
           display:block!important;
       }</style></aside>
 </section>
-<section id="and-more" class="slide level2">
+<section id="citations" class="slide level2">
+<h2>Citations</h2>
+<p>You can include citations.</p>
+<p>Quarto<sup>®</sup> is an open-source scientific and technical publishing system built on Pandoc<span class="citation" data-cites="quartoa">(<a href="#/and-more" role="doc-biblioref" onclick=""><span>“Quarto”</span> 2023</a>)</span>.</p>
+<p>Include the <code>refernces.bib</code> file into the folder.</p>
+<div class="sourceCode" id="cb7" data-code-line-numbers="6"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1"></a><span class="pp">---</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> GHE Template Slides</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="at">  </span><span class="fu">template-quarto-revealjs-theme-revealjs</span><span class="kw">:</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="standard-footer" class="slide level2" style=".smaller">
+<h2>Standard Footer</h2>
+<p>The standard footer is set in the YAML header</p>
+<div class="sourceCode" id="cb8" data-code-line-numbers="6"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1"></a><span class="pp">---</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> GHE Template Slides</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="at">  </span><span class="fu">template-quarto-revealjs-theme-revealjs</span><span class="kw">:</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a><span class="fu">    footer</span><span class="kw">: </span><span class="at">Global Health Engineering &lt;https://ghe.ethz.ch/</span><span class="ch">&gt;</span></span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="indiviual-footer" class="slide level2">
+<h2>Indiviual footer</h2>
+<p>Include a individual footer for each slide including the footer attribute.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource quarto number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a href="#cb9-1"></a>::: footer</span>
+<span id="cb9-2"><a href="#cb9-2"></a>Learn more: [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/)</span>
+<span id="cb9-3"><a href="#cb9-3"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/">Quarto Presentations</a></p>
+</div>
+</section>
+<section id="and-more" class="slide level2 smaller scrollable">
 <h2>And More…</h2>
 <ul>
 <li><a href="https://quarto.org/docs/presentations/revealjs/advanced.html#touch-navigation">Touch</a> optimized (presentations look great on mobile, swipe to navigate slides)</li>
@@ -1230,6 +1285,11 @@ Bob Lawbla
 
 <img src="_extensions/template-quarto-revealjs-theme/ghe-logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p>Global Health Engineering <a href="https://ghe.ethz.ch/" class="uri">https://ghe.ethz.ch/</a></p>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-quartoa" class="csl-entry" role="doc-biblioentry">
+<span>“Quarto.”</span> 2023. <a href="https://quarto.org/">https://quarto.org/</a>.
+</div>
 </div>
 </section>
     </div>
